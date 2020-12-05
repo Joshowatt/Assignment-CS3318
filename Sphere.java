@@ -20,22 +20,22 @@ class Sphere implements Renderable {
        private radSqr = r*r;
     }
 
-public int getSurface()  
-    { 
-      return surface; 
-    } 
-public int getCentre()  
-    { 
-      return centre; 
-    } 
-public int getRadius()  
-    { 
-      return radius; 
-    } 
-public int getRadiusSqr()  
-    { 
-      return radSqr; 
-    } 
+    public int getSurface()  
+        { 
+          return surface; 
+        } 
+    public int getCentre()  
+        { 
+          return centre; 
+        } 
+    public int getRadius()  
+        { 
+          return radius; 
+        } 
+    public int getRadiusSqr()  
+        { 
+          return radSqr; 
+        } 
 
 
     public boolean intersect(Ray ray) {
@@ -46,7 +46,7 @@ public int getRadiusSqr()
 
         // Do the following quick check to see if there is even a chance
         // that an intersection here might be closer than a previous one
-        if (v - getRadius()   > ray.t)
+        if (v - getRadius() > ray.t)
             return false;
 
         // Test if the ray actually intersects the sphere
@@ -65,7 +65,7 @@ public int getRadiusSqr()
         return true;
     }
 
-    public Color Shade(Ray ray, java.util.List<Object> lights, List<Object> objects, Color bgnd) {
+    public Color Shade(Ray ray, java.util.ArrayList<Object> lights, List<Object> objects, Color bgnd) {
         // An object shader doesn't really do too much other than
         // supply a few critical bits of geometric information
         // for a surface shader. It must must compute:
