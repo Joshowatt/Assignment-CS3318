@@ -13,16 +13,26 @@ class Ray {
     private  float t;
     private Renderable object;
 
-   public int getOrigin()  
+   public Vector3D getOrigin()  
     { 
       return origin; 
     } 
 
-  public int getDirection()  
+  public Vector3D getDirection()  
     { 
       return  direction; 
     } 
+    
+   public float getT()  
+    { 
+      return t; 
+    } 
 
+    
+   public Renderable getObject()  
+    { 
+      return object; 
+    } 
 
     private Ray(Vector3D eye, Vector3D dir) {
         origin = new Vector3D(eye);
