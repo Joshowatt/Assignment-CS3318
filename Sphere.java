@@ -8,16 +8,16 @@ import java.util.List;
 
 // An example "Renderable" object
 class Sphere implements Renderable {
-    Surface surface;
-    Vector3D center;
-    float radius;
-    float radSqr;
+    private Surface surface;
+    private Vector3D center;
+    private float radius;
+    private float radSqr;
 
     public Sphere(Surface s, Vector3D c, float r) {
-       private surface = s;
-       private center = c;
-       private radius = r;
-       private radSqr = r*r;
+       surface = s;
+       center = c;
+       radius = r;
+       radSqr = r*r;
     }
 
     public int getSurface()  
